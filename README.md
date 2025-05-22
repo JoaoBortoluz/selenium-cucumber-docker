@@ -1,4 +1,5 @@
 # Teste Automatizado com Selenium em Ruby
+`Modificado e interpretado por: Àna Flávia Melo - RA: 1134228, João Vítor Bortoluz - RA: 1134776, Luiz Henrique Albuquerque - RA: 1134362 e Marina Barbosa - RA: 1135358`
 
 Esse é um fork de https://github.com/peterkappus/selenium-cucumber-docker
 
@@ -25,7 +26,7 @@ sudo su
 docker-compose run ruby bash
 ```
 
-### Caso queira visualizar o container no navegador, abra ->  http://localhost:7900/?autoconnect=1&resize=scale&password=secret
+` Caso queira visualizar o container no navegador, abra ->  http://localhost:7900/?autoconnect=1&resize=scale&password=secret`
 
 ## 4. Dentro do container do ruby, inicialize os testes com o comando:
 
@@ -47,5 +48,5 @@ docker-compose down
 
 ## E está pronto!
 
-`Modificado e interpretado por: Àna Flávia Melo - RA: 1134228, João Vítor Bortoluz - RA: 1134776, Luiz Henrique Albuquerque - RA: 1134362 e Marina Barbosa - RA: 1135358`
+
 
