@@ -4,10 +4,21 @@ Background:
   Given I accept cookies
 
 Scenario: See related words when searching.
-  When I search for "puppies"
+  When I search for "caramel dog"
   Then I should see "dog"
 
+Scenario: See related words when searching.
+  When I search for "pug"
+  Then I should see "dog"
   
-Scenario: Don't see unrelated words when searching.
-  When I search for "dachshund"
-  Then I should NOT see "fish"
+Scenario: See related words when searching.
+  When I search for "pomeranian"
+  Then I should see "dog"
+
+Scenario: See related words when searching.
+  When I search for "Terraria"
+  Then I should NOT see "dog"
+
+Scenario: See related words when searching.
+  When I search for "Fernando Posser Pinheiro"
+  Then I should see "Fernando"
