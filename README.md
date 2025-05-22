@@ -1,90 +1,52 @@
-# Selenium Cucumber Docker
+# Teste Automatizado com Selenium em Ruby
 
 Esse é um fork de https://github.com/peterkappus/selenium-cucumber-docker
 
-Esse projeto consiste em um uma simples automação em Ruby com Cucumber e Selenium usando BDD
+Esse projeto consiste em uma simples automação em **Ruby** com **Cucumber** e **Selenium** usando **BDD**.
 
-## Setup
+## 1. Setup
 
-clone o repo para sua maquina e em seguida siga esses passos:
+Clone o repositório para sua máquina com esse comando:
 
-## Continuar com o resto do README... e após isso apagar a parte em iglês, apagar essa linha também
-
-This repo provides a simple way to setup a Ruby/Cucumber/Capybara/Selenium based environment for test automation with Behaviour Driven Development (BDD).
-
-Check out the related [blog post & video](https://www.peterkappus.com/blog/get-started-with-bdd-using-docker-and-selenium/).
-
-## History
-
-Feb 2023 - updated to use Selenium 4
-
-## Quick start (tl;dr)
-
-Open a terminal in root directory and follow these steps:
-
+```bash
+git clone https://github.com/JoaoBortoluz/selenium-cucumber-docker
+cd selenium-cucumber-docker
 ```
-# Use docker compose to start start the two services
+
+## 2. Abra seu terminal no root:
+
+```bash
+sudo su
+```
+
+## 3. Uso o **docker-compose** para iniciar o container do ruby:
 # and open a bash session in the 'ruby' service:
 
+```bash
 docker-compose run ruby bash
-# Note: This could take a few min the first time you run...
+```
 
-# To see inside the browser, just open http://localhost:7900/?autoconnect=1&resize=scale&password=secret
+### Caso queira visualizar o container no navegador, abra ->  http://localhost:7900/?autoconnect=1&resize=scale&password=secret
 
-# Back in the original terminal session, we're now inside our ruby service.
-# Run the tests with cucumber
+## 4. Dentro do container do ruby, inicialize os testes com o comando:
+
+```bash
 cucumber
+```
 
-# When you're done, you can exit the ruby container
+## 5. Assim que os testes finalizarem, saía do container do ruby com o comando:
+
+```bash
 exit
+```
 
-# Now (from the host machine) stop all the containers
+## 6. Finalize todos os containers com o comando:
+
+```bash
 docker-compose down
-
 ```
 
-## Background
+## E está pronto!
 
-The basic components of BDD are:
+`Modificado e interpretado por: Àna Flávia Melo - RA: 1134228, João Vítor Bortoluz - RA: 1134776, Luiz Henrique Albuquerque - RA: 1134362 e Marina Barbosa - RA: 1135358`
 
-- A running application to test (usually a web app)
-- A web browser (like Chrome or firefox) to render the app and give access to the UI elements
-- A web driver (like Selenium) to drive the browser
-- A testing framework (like Capybara) to examine (and interact with) elements on the page
-- A BDD framework (like Cucumber) to describe our tests (using Gherkin syntax), run them for us, and report on the results.
-- Some language to define the step definitions and tie everything together (in this case, Ruby)
-
-## Using Docker
-
-[Docker compose](https://docs.docker.com/compose/) makes it easy to package all the components into a couple of simple services (containers) and mount your source code into the containers from the host, without installing anything locally.
-
-- The first service (which we'll call 'ruby') will hold the ruby runtime and any gems we need (e.g. cucumber and capybara). We'll build this with our Dockerfile.
-- The second service (which we'll call 'browser') will be an instance of the stand-alone [Selenium-Chrome container](https://github.com/SeleniumHQ/docker-selenium).
-- NOTE: for Apple silicon (e.g. the M1 chip) you'll need to use the special M1 ["seleniarm" ports.](https://github.com/seleniumhq-community/docker-seleniarm)
-
-### Seeing the browser
-
-You can easily open open a browser tab with a VNC client into the running container via [this link](http://localhost:7900/?autoconnect=1&resize=scale&password=secret)
-
-## TROUBLESHOOTING
-
-### Getting an error that port 5900 is already allocated.
-
-You may have "Screen sharing" enabled on your mac.
-Go to "Settings" > "Sharing" and _untick_ the "Screen Sharing box"
-
-## Advanced usage
-
-### Run tests in one step
-
-```
-docker-compose run ruby cucumber
-```
-
-### Using the 'pry' debugger.
-
-You can add a step `And I debug` to your features to open the [pry](https://github.com/pry/pry) interactive debugger which lets you write code to interact with the browser in real-time without restarting your tests.
-
-### Use Scenario Outlines
-
-You can use "[scenario outlines](https://docs.cucumber.io/gherkin/reference/)" to quickly run through the same scenario with different variables.
