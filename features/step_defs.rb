@@ -10,7 +10,9 @@ end
 When("I search for {string}") do |string|
   visit "/"
   fill_in "q", with: string
-  click_on "Google Search", match: :first
+  sleep 5
+  find_field('q').send_keys(:enter)
+  sleep 10
 end
 
 Then("I should see {string}") do |string|

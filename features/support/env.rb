@@ -22,4 +22,4 @@ end
 Capybara.default_driver = :selenium
 
 # set the default URL for our tests
-Capybara.app_host = "https://www.google.com/"
+Capybara.app_host = "https://bing.com/"
