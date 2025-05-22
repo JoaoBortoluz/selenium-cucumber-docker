@@ -20,7 +20,6 @@ sudo su
 ```
 
 ## 3. Uso o **docker-compose** para iniciar o container do ruby:
-# and open a bash session in the 'ruby' service:
 
 ```bash
 docker-compose run ruby bash
