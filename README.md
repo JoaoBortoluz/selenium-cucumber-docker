@@ -3,7 +3,8 @@
 
 Esse é um fork de https://github.com/peterkappus/selenium-cucumber-docker
 
-Esse projeto consiste em uma simples automação em **Ruby** com **Cucumber** e **Selenium** usando **BDD**.
+Esse projeto consiste em uma simples automação em **Ruby** com **Cucumber** e **Selenium** usando **BDD**. 
+Executado em uma máquina virtual Linux (Ubuntu), com a rede no modo Bridge.
 
 ## 1. Setup
 
