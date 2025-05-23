@@ -29,11 +29,11 @@ docker-compose run ruby bash
 ```
 
 ` Caso queira visualizar o container no navegador, abra ->  http://localhost:7900/?autoconnect=1&resize=scale&password=secret`
-ou
-` troque localhost pelo ip da sua maquina conectada na rede para visualizar o grid em outros PCs além do seu`
+Ou
+troque localhost pelo ip da sua maquina conectada na rede para visualizar o grid em outros PCs além do seu.
 
-para acessar o selinum grid na sua home e visualizar todas as maquinas conectadas e execuções na fila, acesse:
-` http://192.168.0.11:4444/ui/`
+Para acessar o selinum grid na sua home e visualizar todas as maquinas conectadas e execuções na fila, acesse:
+` http://localhost:4444/ui/`
 
 ## 4. Dentro do container do ruby, inicialize os testes com o comando:
 
