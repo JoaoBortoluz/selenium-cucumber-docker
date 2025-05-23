@@ -1,9 +1,10 @@
 # Teste Automatizado com Selenium em Ruby
+
 `Modificado e interpretado por: Àna Flávia Melo - RA: 1134228, João Vítor Bortoluz - RA: 1134776, Luiz Henrique Albuquerque - RA: 1134362 e Marina Barbosa - RA: 1135358`
 
 Esse é um fork de https://github.com/peterkappus/selenium-cucumber-docker
 
-Esse projeto consiste em uma simples automação em **Ruby** com **Cucumber** e **Selenium** usando **BDD**. 
+Esse projeto consiste em uma simples automação em **Ruby** com **Cucumber** e **Selenium** usando **BDD**.
 Executado em uma máquina virtual Linux (Ubuntu), com a rede no modo Bridge.
 
 ## 1. Setup
@@ -28,6 +29,11 @@ docker-compose run ruby bash
 ```
 
 ` Caso queira visualizar o container no navegador, abra ->  http://localhost:7900/?autoconnect=1&resize=scale&password=secret`
+ou
+` troque localhost pelo ip da sua maquina conectada na rede para visualizar o grid em outros PCs além do seu`
+
+para acessar o selinum grid na sua home e visualizar todas as maquinas conectadas e execuções na fila, acesse:
+` http://192.168.0.11:4444/ui/`
 
 ## 4. Dentro do container do ruby, inicialize os testes com o comando:
 
@@ -48,6 +54,3 @@ docker-compose down
 ```
 
 ## E está pronto!
-
-
-
